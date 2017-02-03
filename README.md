@@ -1,5 +1,5 @@
 # Remove Docker Overlay Networks
----
+
 Sometimes, when applications are brought down abnormally (like without running a `docker-compose down` or when upgrading the docker engine), overlay networks can get orphaned. The terminated & now non-existent containers remain in the `Containers` attribute of the networks. This prevents the network from being removed and cleaned up.
 ```
 $ docker network rm newnet29_default
